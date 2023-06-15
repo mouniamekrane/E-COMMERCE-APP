@@ -73,7 +73,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>MOUNIA SHOP</Logo>
+                    <Logo>HOUSE OF COUTURE </Logo>
                 </Center>
                 <Right>
                   <MenuItem>REGISTER</MenuItem>
