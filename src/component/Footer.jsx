@@ -1,7 +1,9 @@
-import { Facebook } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive';
+
 import {
+  Facebook,
   MailOutline,
   Phone,
     Instagram,
@@ -9,10 +11,14 @@ import {
     Pinterest,
     Twitter,
   } from "@material-ui/icons";
+
 const Container = styled.div`
 display: flex;
 align-items : center;
+${mobile({flexDirection : "column" })};
+
 `
+
 const Left = styled.div`
 flex : 1;
 display: flex;
@@ -20,13 +26,17 @@ flex-direction: column;
 margin-left:50px;
 `
 
-const Logo = styled.h1``
+const Logo = styled.h1``;
+
+
 const Desc = styled.p`
 margin: 20px 0px;
 `
+
 const SocialContainer = styled.div`
 display: flex;
 `
+
 const SocialIcon = styled.div`
 width: 40px;
 height: 40px;
@@ -42,6 +52,8 @@ margin-right : 20px;
 const Center = styled.div`
 flex : 1;
 padding : 20px;
+${mobile({display : "none" })};
+
 `
 
 const Title = styled.h3`
@@ -64,13 +76,15 @@ const ListItem = styled.li`
 const Right = styled.div`
 flex : 1;
 padding : 20px;
-
+${mobile({ backgroundColor: "#fff8f8" })}
 `
+
 const ContactItem = styled.div`
 margin-bottom : 20px;
 display : flex;
 align-items : center;
 `
+
 const Payment = styled.img`
  width: 50%;
 `
@@ -113,8 +127,7 @@ const Footer = () => {
           <ListItem>Wishlist</ListItem>
           <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
-        </List>
-        
+        </List>  
       </Center>
       <Right>
           <Title>contact</Title>
